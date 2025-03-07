@@ -1,0 +1,651 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe4b5; /* Slightly darker warm cream */
+  color: #000000; /* Black text for better contrast */
+}
+
+/* Navbar Styles (Top Right - Horizontal) */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* White background */
+  background-color:#ffe4b5 ;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; /* Space between navbar items */
+}
+
+.navbar ul li a {
+  color: #0a0000; /* Black text for navbar links */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navbar ul li a:hover {
+  background-color: #dfbf82;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: #e7dada; /* Black text for navbar button */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Home Page Styles */
+.home {
+  padding: 80px 20px 20px;
+  text-align: center;
+  background-image: url("C:\Users\USER\Desktop\food\frontend\src\assets\delicious-food-table.png");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+  background-repeat: none;
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home h1 {
+  color: #000000; /* Black text */
+  font-size: 3.5rem;
+
+  
+}
+
+.home button {
+  background-color: #2c3e50; /* Black background */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.home button:hover {
+  background-color: #9089c0; /* Darker shade on hover */
+}
+
+/* Recipe Grid Styles */
+.recipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: visible; /* Ensure icons are not clipped */
+  background: white; /* Add background color */
+  position: relative; 
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #000000; /* Black text */
+}
+
+.recipe-card p {
+  color: #000000; /* Black text */
+  font-size: 14px;
+}
+
+/* Recipe Details Styles */
+.recipe-details {
+  max-width: 800px;
+  margin: 80px auto 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details h1 {
+  color: #000000; /* Black text */
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.recipe-details img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.recipe-details h3 {
+  color: #000000; /* Black text */
+  margin: 20px 0 10px;
+}
+
+.recipe-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-details ul li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000; /* Black text */
+}
+
+.recipe-details p {
+  color: #000000; /* Black text */
+  line-height: 1.6;
+}
+
+
+
+/* Share Recipe Form Styles */
+.add-recipe {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.add-recipe h1 {
+  color: #000000; /* Black text */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+
+.add-recipe form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-recipe .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.add-recipe input,
+.add-recipe textarea,
+.add-recipe select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: #fedea4;
+}
+
+.add-recipe input:focus,
+.add-recipe textarea:focus,
+.add-recipe select:focus {
+  border-color: #000000; /* Black border on focus */
+  outline: none;
+}
+
+.add-recipe textarea {
+  resize: vertical;
+  min-height: 150px;
+ 
+}
+
+.add-recipe button {
+  width: 100%;
+  padding: 12px;
+  background-color:  #e39b1e; /* Black background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-recipe button:hover {
+  background-color: #333333; /* Darker shade on hover */
+}
+/* Footer Styles */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Ensure content doesn't overlap with the footer */
+body {
+  padding-bottom: 60px; /* Adjust this value based on your footer height */
+}
+/* Login Form Styles */
+
+/* Footer Styles */
+
+
+/* Ensure content doesn't overlap with the footer */
+body {
+  padding-bottom: 60px; /* Adjust this value based on your footer height */
+}
+.login-form {
+  background-color: #ffe4b5; /* Light peach background */
+  padding: 30px;
+  border-radius: 10px;
+  
+  max-width: 400px;
+  margin: 100px auto; /* Increased margin to push the form away from the footer */
+ 
+}
+
+.login-form h2 {
+  color: #333; /* Dark gray instead of black for softer contrast */
+  margin-bottom: 20px;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.login-form label {
+  color: #333; /* Dark gray instead of black */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border instead of black */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white; /* White background for inputs */
+  color: #333; /* Dark gray text for inputs */
+}
+
+.login-form input::placeholder {
+  color: #888; /* Light gray placeholder text */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333; /* Dark gray background for the button */
+  color: white; /* White text for the button */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #555; /* Slightly lighter gray on hover */
+}
+
+.login-form p {
+  color: #333; /* Dark gray text for the toggle link */
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-form p:hover {
+  text-decoration: underline;
+}
+
+.login-form .error {
+  color: red; /* Red text for error messages */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login Form Styles */
+/*  */
+/* About Us Page Styles */
+.about-us {
+  max-width: 1100px;
+  margin: 80px auto 40px;
+  padding: 20px;
+/* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Black text */
+  line-height: 1.6;
+}
+
+.about-us h1 {
+  color: #2c3e50; /* Deep navy blue for the main heading */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-us h2 {
+  color: #2c3e50; /* Deep navy blue for subheadings */
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.about-us ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.about-us ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.about-us strong {
+  color: #2c3e50; /* Deep navy blue for bold text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 15px;
+    margin: 60px 20px 20px;
+  }
+
+  .about-us h1 {
+    font-size: 2rem;
+  }
+
+  .about-us h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-us p,
+  .about-us ul li {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Search Bar Styles */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff; /* White background */
+  border-radius: 30px; /* Fully rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Ensures the button stays within the rounded container */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Dark gray text */
+}
+
+.search-bar input::placeholder {
+  color: #999; /* Light gray placeholder text */
+}
+
+.search-bar input:focus {
+  color: #000; /* Black text on focus */
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  background-color: #ff8c42; /* Warm orange */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #e67e3a; /* Darker shade on hover */
+}
+
+.search-bar button svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff; /* White icon */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 90%;
+  }
+
+  .search-bar input {
+    padding: 10px 15px;
+  }
+
+  .search-bar button {
+    padding: 10px 15px;
+  }
+}
+.logo {
+  position: absolute;  /* Positions it relative to the viewport */
+  top: 10px;           /* Adjust distance from the top */
+  left: 10px;          /* Adjust distance from the left */
+  width: 100px;        /* Adjust size as needed */
+  height: auto; 
+  border-radius: 200px;       /* Maintain aspect ratio */
+}
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.icon-buttons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  margin-top: 10px;
+}
+
+.icon-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Increase icon size */
+  color: #000; /* Default icon color */
+  padding: 0; /* Remove default button padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-details {
+  margin-top: 10px;
+}
+
+
+
+/* General Styling */
+.contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffe4b5;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+  }
+
+  .contact-item {
+    font-size: 1rem;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-container p {
+    font-size: 0.9rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+  }
+
+  .contact-item i {
+    font-size: 1rem;
+  }
+}

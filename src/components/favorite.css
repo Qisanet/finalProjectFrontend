@@ -1,0 +1,97 @@
+/* Styling for the favorite recipe card */
+.favorite-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 20px;
+  }
+  
+  .favorite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card content */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Recipe image */
+  .recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe-card:hover .recipe-image {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  /* Recipe info section */
+  .recipe-info {
+    padding-top: 15px;
+  }
+  
+  /* Title */
+  .recipe-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Time info */
+  .recipe-time {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Ingredients and instructions headings */
+  .recipe-subheading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+  /* Ingredients list */
+  .ingredients-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .ingredients-list li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  /* Instructions */
+  .instructions {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Hover effect on the card */
+  .favorite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive grid layout for favorite recipes */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
