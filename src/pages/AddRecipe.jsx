@@ -27,7 +27,7 @@ export default function AddRecipe() {
       formData.append(key, recipeData[key]);
     }
     try {
-      await axios.post("http://localhost:5500/recipe", formData, {
+      await axios.post("https://finalprojectbackend-3adu.onrender.com/recipe", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           authorization: "Bearer " + localStorage.getItem("token"),

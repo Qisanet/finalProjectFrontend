@@ -17,7 +17,7 @@ export default function InputForm({ onClose }) {
       : { email, password };
 
     try {
-      const response = await axios.post(`http://localhost:5500/${endpoint}`, userData);
+      const response = await axios.post(`https://finalprojectbackend-3adu.onrender.com/${endpoint}`, userData);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       onClose();

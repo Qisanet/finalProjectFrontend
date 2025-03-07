@@ -12,7 +12,7 @@ import EditRecipe from "./pages/EditRecipe";
 
 const getAllRecipes = async () => {
   try {
-    const response = await axios.get("http://localhost:5500/recipe");
+    const response = await axios.get("https://finalprojectbackend-3adu.onrender.com/recipe");
     return response.data;
   } catch (error) {
     console.error("Error fetching recipes:", error);

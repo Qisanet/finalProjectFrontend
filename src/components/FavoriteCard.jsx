@@ -6,7 +6,7 @@ export default function FavoriteCard({ recipe }) {
   return (
     <div className="favorite-card">
       <div className="card-content">
-        <img className="recipe-image" src={`http://localhost:5500/images/${recipe.coverImage}`} alt={recipe.title} />
+        <img className="recipe-image" src={`https://finalprojectbackend-3adu.onrender.com/images/${recipe.coverImage}`} alt={recipe.title} />
         <div className="recipe-info">
           <h3 className="recipe-title">{recipe.title}</h3>
           <p className="recipe-time">

@@ -21,7 +21,7 @@ export default function RecipeItems() {
     const ownershipStatus = {};
     const requests = recipes.map(async (recipe) => {
       try {
-        const response = await axios.get(`http://localhost:5500/recipe/${recipe._id}/isOwner`, {
+        const response = await axios.get(`https://finalprojectbackend-3adu.onrender.com/recipe/${recipe._id}/isOwner`, {
           headers: { authorization: "Bearer " + token },
         });
         console.log(response);

@@ -45,7 +45,7 @@ export default function AllRecipe() {
   // onDelete function
   const onDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5500/recipe/${id}`, {
+      await axios.delete(`https://finalprojectbackend-3adu.onrender.com/recipe/${id}`, {
         headers: { authorization: "Bearer " + token },
       });
       // Update the state after deleting

@@ -11,7 +11,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = isSignUp ? "signUp" : "login";
-    const response = await axios.post(`http://localhost:5500/${endpoint}`, { email, password });
+    const response = await axios.post(`https://finalprojectbackend-3adu.onrender.com/${endpoint}`, { email, password });
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("user", JSON.stringify(response.data.user));
     navigate("/all-recipe");

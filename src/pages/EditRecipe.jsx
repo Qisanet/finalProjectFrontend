@@ -11,7 +11,7 @@ export default function EditRecipe() {
   useEffect(() => {
     const getData = async () => {
       await axios
-        .get(`http://localhost:5500/recipe/${id}`)
+        .get(`https://finalprojectbackend-3adu.onrender.com/recipe/${id}`)
         .then((response) => {
           let res = response.data;
           setRecipeData({

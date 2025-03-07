@@ -21,7 +21,7 @@ export default function RecipeCard({ recipe, isOwner, onDelete, onEdit }) {
   
       // Assuming you have an API endpoint for adding a recipe to favorites
       const response = await axios.post(
-        "http://localhost:5500/recipe/addFavorite", 
+        "https://finalprojectbackend-3adu.onrender.com/recipe/addFavorite", 
         { recipeId: recipe._id },
         {
           headers: {
@@ -42,7 +42,7 @@ export default function RecipeCard({ recipe, isOwner, onDelete, onEdit }) {
 
   return (
     <div className="recipe-card" onClick={() => setShowDetails(!showDetails)}>
-      <img src={`http://localhost:5500/images/${recipe.coverImage}`} alt={recipe.title} />
+      <img src={`https://finalprojectbackend-3adu.onrender.com/images/${recipe.coverImage}`} alt={recipe.title} />
       <h3>{recipe.title}</h3>
       <p>
         <BsStopwatchFill /> {recipe.time}

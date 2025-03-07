@@ -18,7 +18,7 @@ export default function Favorite() {
 
       try {
         // Fetch the user's favorites from the backend
-        const response = await axios.get("http://localhost:5500/recipe/my/getFavorites", {
+        const response = await axios.get("https://finalprojectbackend-3adu.onrender.com/recipe/my/getFavorites", {
           headers: { authorization: `Bearer ${token}` },
         });
 
