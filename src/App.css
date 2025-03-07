@@ -55,7 +55,7 @@ body {
 .home {
   padding: 80px 20px 20px;
   text-align: center;
-  background-image: url("C:\Users\USER\Desktop\food\frontend\src\assets\delicious-food-table.png");
+  background-image: url("../src//assets/delicious-food-table.png");
   background-position: center;
   background-size: cover;
   height: 100vh;
