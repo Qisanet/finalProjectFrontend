@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -9,15 +11,45 @@ export default function AddRecipe() {
     ingredients: "",
     instructions: "",
     time: "",
-    file: null,
+    file: "",
   });
+  const [base64, setBase64] = useState("");
+ const handleFileUpload = (event) => {
+ const file = event.target.files[0];
+ if (file) {
+ const reader = new FileReader();
+ reader.onloadend = () => {
+ setBase64(reader.result);
+ setRecipeData((prev) => ({
+  ...prev,
+  file: base64, // Save the Cloudinary URL
+}));
+console.log(recipeData)
+ };
+ reader.readAsDataURL(file);
+ }
+ };
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     const { name, value, files } = e.target;
-    setRecipeData((prev) => ({
-      ...prev,
-      [name]: name === "file" ? files[0] : value,
-    }));
+    if (base64) {
+ 
+       console.log("basee 64" ,base64)
+
+     
+        setRecipeData((prev) => ({
+          ...prev,
+          file: base64, // Save the Cloudinary URL
+        }));
+      
+    } else {
+      setRecipeData((prev) => ({
+        ...prev,
+        [name]: value,
+        file:base64
+      }));
+    }
+    console.log("receipe data ",recipeData)
   };
 
   const handleSubmit = async (e) => {
@@ -61,7 +93,7 @@ export default function AddRecipe() {
         </div>
         <div className="form-group">
           <label>Image:</label>
-          <input type="file" name="file" onChange={handleChange} required />
+          <input type="file" name="file" onChange={handleFileUpload}   accept="image/*" required />
         </div>
         <button type="submit">Share Recipe</button>
       </form>

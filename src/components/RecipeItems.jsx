@@ -24,7 +24,7 @@ export default function RecipeItems() {
         const response = await axios.get(`https://finalprojectbackend-3adu.onrender.com/recipe/${recipe._id}/isOwner`, {
           headers: { authorization: "Bearer " + token },
         });
-        console.log(response);
+        console.log("checking ownership",response);
         ownershipStatus[recipe._id] = response.data.isOwner;
       } catch (error) {
         console.error("Error checking ownership:", error);
@@ -38,7 +38,7 @@ export default function RecipeItems() {
 
   const onDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5551/recipe/${id}`, {
+      await axios.delete(`https://finalprojectbackend-3adu.onrender.com/recipe/${id}`, {
         headers: { authorization: "Bearer " + token },
       });
       setAllRecipes((recipes) => recipes.filter((recipe) => recipe._id !== id));

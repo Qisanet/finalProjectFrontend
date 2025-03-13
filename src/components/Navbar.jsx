@@ -21,6 +21,7 @@ export default function Navbar({ onLoginClick }) {
         </li>
         <li>
           <button onClick={onLoginClick}>Login</button>
+         
         </li>
       </ul>
     </nav>

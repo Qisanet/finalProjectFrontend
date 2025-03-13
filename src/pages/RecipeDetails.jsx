@@ -6,9 +6,11 @@ export default function RecipeDetails() {
   return (
     <div className="recipe-details">
       <h1>{recipe.title}</h1>
-      <img src={`https://finalprojectbackend-3adu.onrender.com/images/${recipe.coverImage}`} alt={recipe.title} />
+      {/* <img src={`https://finalprojectbackend-3adu.onrender.com/images/${recipe.coverImage}`} alt={recipe.title} /> */}
+      <img src={recipe.coverImage} alt={recipe.title} />
+
       <p>
-        <strong>Time:</strong> {recipe.time}
+        <strong>Time:</strong> {recipe.time} 
       </p>
       <h3>Ingredients</h3>
       <ul>

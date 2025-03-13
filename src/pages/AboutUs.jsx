@@ -3,40 +3,54 @@ export default function AboutUs() {
     <div className="about-us">
       <h1>About Us</h1>
       <p>
-        Welcome to <strong>Recipe App</strong>, your go-to destination for discovering, sharing, and creating delicious recipes! We are passionate about food and believe that cooking should be fun, accessible, and inspiring for everyone.
+        Welcome to <strong>Habesha Food Recipe</strong>, your ultimate destination for exploring the rich and vibrant flavors of Ethiopian and Eritrean cuisine. We are passionate about sharing the authentic tastes, traditions, and stories behind every dish, making it easy for you to bring the essence of Habesha culture into your kitchen.
       </p>
 
       <h2>Our Story</h2>
       <p>
-        Recipe App was founded in 2023 by a group of food enthusiasts who wanted to create a platform where people could easily find and share their favorite recipes. What started as a small project has grown into a vibrant community of home cooks, professional chefs, and food lovers from around the world.
+        Habesha Food Recipe was born out of a deep love for the culinary heritage of Ethiopia and Eritrea. Inspired by family traditions, cherished recipes, and the joy of sharing meals with loved ones, we created this platform to celebrate and preserve the unique flavors of Habesha cuisine. What started as a personal passion has grown into a thriving community of food enthusiasts, home cooks, and culture lovers from around the world.
       </p>
 
       <h2>Our Mission</h2>
       <p>
-        Our mission is to make cooking enjoyable and stress-free for everyone. Whether you're a seasoned chef or a beginner in the kitchen, we provide a wide range of recipes, tips, and resources to help you create delicious meals and explore new flavors.
+        Our mission is simple: to make Habesha cuisine accessible to everyone. Whether you're a seasoned chef or just starting your culinary journey, we provide easy-to-follow recipes, cooking tips, and cultural insights to help you create authentic Habesha dishes at home. We believe that food is more than just nourishment—it's a way to connect, celebrate, and share our heritage.
       </p>
 
       <h2>What We Offer</h2>
       <ul>
-        <li><strong>Explore Recipes:</strong> Browse through thousands of recipes from different cuisines and categories.</li>
-        <li><strong>Share Your Creations:</strong> Upload your own recipes and share them with the community.</li>
-        <li><strong>Save Favorites:</strong> Save your favorite recipes and access them anytime.</li>
-        <li><strong>Learn and Grow:</strong> Get tips, tricks, and inspiration to improve your cooking skills.</li>
+        <li>
+          <strong>Authentic Recipes:</strong> Discover traditional dishes like <strong>Doro Wat</strong>, <strong>Injera</strong>, <strong>Tibs</strong>, and more, all with step-by-step instructions.
+        </li>
+        <li>
+          <strong>Cultural Insights:</strong> Learn about the history and significance of each dish, and how it fits into Habesha culture.
+        </li>
+        <li>
+          <strong>Community Sharing:</strong> Share your own recipes, tips, and experiences with a growing community of food lovers.
+        </li>
+        <li>
+          <strong>Save Favorites:</strong> Save your favorite recipes and create your own personalized collection.
+        </li>
       </ul>
 
       <h2>Our Values</h2>
       <p>
-        At Recipe App, we are committed to:
+        At Habesha Food Recipe, we are guided by the following principles:
       </p>
       <ul>
-        <li><strong>Quality:</strong> We strive to provide high-quality recipes and content.</li>
-        <li><strong>Community:</strong> We believe in the power of sharing and connecting with others through food.</li>
-        <li><strong>Innovation:</strong> We are constantly improving our platform to make it more user-friendly and enjoyable.</li>
+        <li>
+          <strong>Authenticity:</strong> We are committed to preserving the true flavors and traditions of Habesha cuisine.
+        </li>
+        <li>
+          <strong>Community:</strong> We believe in the power of food to bring people together and foster meaningful connections.
+        </li>
+        <li>
+          <strong>Innovation:</strong> We continuously improve our platform to make it more user-friendly, engaging, and inspiring.
+        </li>
       </ul>
 
-      <h2>Join Us</h2>
+      <h2>Join Our Community</h2>
       <p>
-        Whether you're here to find inspiration, share your recipes, or connect with other food lovers, we're excited to have you as part of our community. Let's cook, share, and enjoy delicious food together!
+        Whether you're here to explore new flavors, reconnect with your roots, or share your love for Habesha cuisine, we're thrilled to have you as part of our community. Together, let's celebrate the beauty of Ethiopian and Eritrean culture—one delicious recipe at a time.
       </p>
     </div>
   );
