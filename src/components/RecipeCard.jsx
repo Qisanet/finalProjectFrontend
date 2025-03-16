@@ -2,8 +2,7 @@ import { useState } from "react";
 import { BsStopwatchFill } from "react-icons/bs";
 import { FaHeart, FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHourglass } from "@fortawesome/free-solid-svg-icons";
+
 import axios from "axios";
 
 export default function RecipeCard({ recipe, isOwner, onDelete, onEdit }) {
@@ -46,7 +45,7 @@ export default function RecipeCard({ recipe, isOwner, onDelete, onEdit }) {
       <h3>{recipe.title}</h3>
       <p>
         < BsStopwatchFill className="time-icon" />
-        {recipe.time} minutes
+        {recipe.time} 
       </p>
 
       {/* Icons for Favorite, Edit, and Delete */}
