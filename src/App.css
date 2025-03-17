@@ -12,14 +12,15 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  /* White background */
+
   background-color:#ffe4b5 ;
+
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center; /* Center items vertically */
+  justify-content: flex-end; 
+  align-items: center; 
 }
 
 .navbar ul {

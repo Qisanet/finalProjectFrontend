@@ -8,13 +8,27 @@ export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const endpoint = isSignUp ? "signUp" : "login";
-    const response = await axios.post(`https://finalprojectbackend-3adu.onrender.com/${endpoint}`, { email, password });
-    localStorage.setItem("token", response.data.token);
-    localStorage.setItem("user", JSON.stringify(response.data.user));
-    navigate("/all-recipe");
+    try {
+      const response = await axios.post(
+        `http://localhost:5500/${endpoint}`,
+        { email, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true, // Include credentials (if needed)
+        }
+      );
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
+      navigate("/all-recipe");
+    } catch (error) {
+      console.error("Error:", error.response?.data?.error || error.message);
+    }
   };
 
   return (
