@@ -97,7 +97,7 @@ export default function InputForm({ onClose }) {
 
     try {
       const response = await axios.post(
-        `http://localhost:5500/${endpoint}`,
+        `https://finalprojectbackend-3adu.onrender.com/${endpoint}`,
         userData
       );
       localStorage.setItem("token", response.data.token);
