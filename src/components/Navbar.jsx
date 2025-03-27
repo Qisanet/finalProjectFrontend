@@ -1,6 +1,13 @@
+
 // import { NavLink } from "react-router-dom";
 
-// export default function Navbar({ onLoginClick }) {
+// export default function Navbar({ onLoginClick, isLoggedIn }) {
+//   const handleLogout = () => {
+//     localStorage.removeItem("token");
+//     localStorage.removeItem("user");
+//     window.location.reload(); // Refresh the page to reset the state
+//   };
+
 //   return (
 //     <nav className="navbar">
 //       <ul>
@@ -20,26 +27,23 @@
 //           <NavLink to="/contact-us">Contact Us</NavLink>
 //         </li>
 //         <li>
-//           <button onClick={onLoginClick}>Login</button>
-         
+//           {isLoggedIn ? (
+//             <button onClick={handleLogout}>Logout</button>
+//           ) : (
+//             <button onClick={onLoginClick}>Login</button>
+//           )}
 //         </li>
 //       </ul>
 //     </nav>
 //   );
 // }
-// Navbar.js
-// Navbar.js
-// Navbar.js
-// Navbar.js
-// Navbar.js
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-export default function Navbar({ onLoginClick, isLoggedIn }) {
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    window.location.reload(); // Refresh the page to reset the state
-  };
+export default function Navbar({ isLoggedIn }) {
+  const navigate = useNavigate();
+
+ 
+
 
   return (
     <nav className="navbar">
@@ -60,12 +64,23 @@ export default function Navbar({ onLoginClick, isLoggedIn }) {
           <NavLink to="/contact-us">Contact Us</NavLink>
         </li>
         <li>
+  <NavLink
+    to="/"
+    onClick={() => {
+      localStorage.removeItem("token");
+      navigate("/", { replace: true }); // Redirect to home and clear history
+    }}
+  >
+    Logout
+  </NavLink>
+</li>
+        {/* <li>
           {isLoggedIn ? (
             <button onClick={handleLogout}>Logout</button>
           ) : (
-            <button onClick={onLoginClick}>Login</button>
+            ""
           )}
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

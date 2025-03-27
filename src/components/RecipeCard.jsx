@@ -35,35 +35,7 @@ const toggleFavorite = async () => {
     console.error("Error adding recipe to favorites:", error);
   }
 };
-  // const toggleFavorite = async () => {
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     if (!token) {
-  //       console.error("No token found. Please log in first.");
-  //       return;
-  //     }
-
-  //     setIsFavorite((prev) => !prev);
-
-  //     const response = await axios.post(
-  //       "https://finalprojectbackend-3adu.onrender.com/recipe/addFavorite",
-  //       { recipeId: recipe._id },
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-
-  //     if (response.status !== 200) {
-  //       setIsFavorite((prev) => !prev);
-  //       console.error("Failed to update favorite status");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error adding recipe to favorites:", error);
-  //     setIsFavorite((prev) => !prev);
-  //   }
-  // };
+  
 
   return (
     <div className="recipe-card" onClick={() => setShowDetails(!showDetails)}>

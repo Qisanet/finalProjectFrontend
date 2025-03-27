@@ -86,6 +86,7 @@ import axios from "axios";
 import EditRecipe from "./pages/EditRecipe";
 import ErrorPage from "./pages/ErrorPage";
 
+
 const getAllRecipes = async () => {
   try {
     const response = await axios.get("https://finalprojectbackend-3adu.onrender.com/recipe");
@@ -122,6 +123,8 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+     
+    
       {
         path: "/all-recipe",
         element: <AllRecipe />,

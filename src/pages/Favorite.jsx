@@ -22,9 +22,19 @@ export default function Favorite() {
           "https://finalprojectbackend-3adu.onrender.com/recipe/my/getFavorites",
           { headers: { authorization: `Bearer ${token}` } }
         );
-        setFavorites(response.data);
+
+        console.log("Favorites API Response:", response.data); // Debugging
+
+        // Ensure response data is an array before updating state
+        if (Array.isArray(response.data)) {
+          setFavorites(response.data);
+        } else {
+          console.error("Unexpected response format:", response.data);
+          setFavorites([]);
+        }
       } catch (error) {
         console.error("Error fetching favorites:", error);
+        setFavorites([]); // Handle error by resetting to an empty array
       }
     };
 
@@ -32,44 +42,25 @@ export default function Favorite() {
   }, [navigate]);
 
   // Function to handle removing a favorite
-  // const handleRemoveFavorite = async (recipeId) => {
-  //   const token = localStorage.getItem("token");
-  //   if (!token) {
-  //     navigate("/login");
-  //     return;
-  //   }
-
-  //   try {
-  //     await axios.delete(
-  //       `https://finalprojectbackend-3adu.onrender.com/recipe/${recipeId}/removeFavorite`,
-  //       { headers: { authorization: `Bearer ${token}` } }
-  //     );
-
-  //     // Update the UI by filtering out the removed recipe
-  //     setFavorites((prevFavorites) =>
-  //       prevFavorites.filter((favorite) => favorite.recipe._id !== recipeId)
-  //     );
-  //   } catch (error) {
-  //     console.error("Error removing favorite:", error);
-  //   }
-  // };
   const handleRemoveFavorite = async (recipeId) => {
     const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
       return;
     }
-  
+
     try {
       // Send a request to the backend to permanently remove the favorite
       await axios.delete(
         `https://finalprojectbackend-3adu.onrender.com/recipe/${recipeId}/removeFavorite`,
         { headers: { authorization: `Bearer ${token}` } }
       );
-  
+
       // Update the UI by filtering out the removed recipe
       setFavorites((prevFavorites) =>
-        prevFavorites.filter((favorite) => favorite.recipe._id !== recipeId)
+        prevFavorites.filter(
+          (favorite) => favorite.recipe && favorite.recipe._id !== recipeId
+        )
       );
     } catch (error) {
       console.error("Error removing favorite:", error);
@@ -81,13 +72,15 @@ export default function Favorite() {
       <h1>Favorite Recipes</h1>
       <div className="recipe-grid">
         {favorites.length > 0 ? (
-          favorites.map((favorite) => (
-            <FavoriteCard
-              key={favorite.recipe._id}
-              recipe={favorite.recipe}
-              onRemove={handleRemoveFavorite} // Pass the remove function
-            />
-          ))
+          favorites.map((favorite) =>
+            favorite.recipe ? ( // Ensure favorite.recipe exists
+              <FavoriteCard
+                key={favorite.recipe._id}
+                recipe={favorite.recipe}
+                onRemove={handleRemoveFavorite}
+              />
+            ) : null
+          )
         ) : (
           <p>No favorite recipes found. Add some recipes to your favorites!</p>
         )}
